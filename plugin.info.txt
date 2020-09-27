@@ -4,4 +4,4 @@ email  sam@takodev.com
 date   2020-09-27
 name   Media Resize Blacklist
 desc   Stop certain media extensions from being resized using the native DokuWiki methods
-url    https://github.com/takuy/dokuwiki-plugin-resizeblacklist
+url    https://www.dokuwiki.org/plugin:resizeblacklist
