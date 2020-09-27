@@ -1,0 +1,1 @@
+$conf['no_resize'] = '';
