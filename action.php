@@ -23,5 +23,6 @@ if(class_exists("helper_plugin_redirect", TRUE)) {
             $isImage = substr($MIME, 0, 5) == 'image';
 
             return !( $isImage && (in_array("all", $this->getConf("no_resize")) || in_array($EXT, $this->getConf["no_resize"])) );
+        }
     }
 }
