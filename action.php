@@ -18,9 +18,11 @@ class action_plugin_resizeblacklist extends DokuWiki_Action_Plugin {
      */
     function can_resize(&$event, $param) {
         $EXT = $event->data["ext"];
-        $MIME = $event->data["ext"];
+        $MIME = $event->data["mime"];
         $isImage = substr($MIME, 0, 5) == 'image';
-        
-        return !( $isImage && (in_array("all", $this->getConf("no_resize")) || in_array($EXT, $this->getConf["no_resize"])) );
+
+        if($isImage && (in_array("all", $this->getConf("no_resize")) || in_array($EXT, $this->getConf("no_resize"))) ) {
+            $event->preventDefault();
+        }
     }
 }
